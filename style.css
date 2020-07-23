@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-family: chango;
+  color: #ff5d8f;
+  font-size: 60px;
+}
+
+body {
+  padding-left: 20px;
+}
+
+button {
+padding: 7px;
+margin: 10px;
+border: rgb(255, 192, 239) solid 2px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+}
+
+.error-message {
+    color: red;
+}
+
+
+/* mobile first using flex */
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+
+/* media queries for desktop */
+@media all and (min-width: 600px) {
+  .group {
+    flex-direction: row;
+  }
+
+   header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
