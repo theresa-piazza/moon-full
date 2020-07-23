@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Chango">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>moon ○ full</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <div class="container">
+    <h1> moon ○ full </h1>
+
+    <!-- Moon API -->
+    <p class="opener">Have you ever looked up at the night sky and wondered if the moon was full?</p>
+      <form id="moon">
+        <input type="submit" id="moonFind" value="tell me the moon phase">
+      </form>
+
+    <div id="js-results-moon" class="hidden">
+      <p>tonight's moon is...</p>
+        <div id="js-results-here">
+        </div>
+        <div class="js-moon-image">
+        </div>
+    </div>
+
+  <!-- Weather API -->
+    
+      <br> <br>
+      <p>but can you even see the moon tonight?</p>
+      
+        <form id="findWeather">
+
+          <label>Enter your zip code to find out weather for your area.</label><br>
+          <input id="zip" type="text" pattern="[0-9]{5}">
+          
+          <input type="submit" id="submitZip"> 
+          <br><br>
+        </form>
+
+          <section id="js-results-weather" class="hidden">
+            <div id="js-weather-here">
+            <p>Today's weather:</p>
+            </section>
+        
+    
+
+
+  <!-- Horoscope API -->
+    <br><br>
+    <form id = "js-choose-sign">
+      <p>And what does that mean for you? choose your sign...</p>
+
+      <button class="sign" type="button" id="aries">Aries</button>
+      <button class="sign" type="button" id="taurus">Taurus</button>
+      <button class="sign" type="button" id="gemini">Gemini</button>
+      <button class="sign" type="button" id="cancer">Cancer</button>
+      <button class="sign" type="button" id="leo">Leo</button>
+      <button class="sign" type="button" id="virgo">Virgo</button>
+      <button class="sign" type="button" id="libra">Libra</button>
+      <button class="sign" type="button" id="scopio">Scorpio</button>
+      <button class="sign" type="button" id="sagittarius">Sagittarius</button>
+      <button class="sign" type="button" id="capricorn">Capricorn</button>
+      <button class="sign" type="button" id="aquarius">Aquarius</button>
+      <button class="sign" type="button" id="pisces">Pisces</button>
+      <br><br>
+
+        <input type="submit" id="horoscope" value="what's your horoscope?">
+    </form>
+
+    <div id="js-results" class="hidden">
+      <h3>today's horoscope:</h3>
+        <ul id="js-results-list">
+        </ul>
+    </div>
+
+    <div id="js-error-message">
+    </div>
+    
+  </div>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
