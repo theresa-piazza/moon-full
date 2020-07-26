@@ -23,7 +23,9 @@
           <div id="js-results-here">
           </div>
       
-          <div id="js-moon-image" class="moonPhasePic" "js-moon-error"> 
+          <div id="js-moon-image" class="moonPhasePic"> 
+            <div class="js-moon-error"> 
+            </div>
           </div>
       </div>
       
@@ -33,7 +35,7 @@
         <a href="#weather" class="buttonLink">find out the weather</a>
       </div>
 
-      <div class="sectionLink" "alignRight">
+      <div class="sectionLink">
         <a href="#js-choose-sign" class="buttonLink">find out your horoscope</a>
         <p class="smaller">And what does that mean for you?</p>
       </div>
@@ -46,11 +48,12 @@
         <section id="weather"><br>
           <form id="findWeather">
 
-          <label>Enter your 5 digit zip code to find out weather for your area.</label><br>
-            <input id="zip" type="text" pattern="[0-9]{5}">
-            <input type="submit" id="submitZip"> 
-            <br><br>
-        </form>
+            <label>Enter your 5 digit zip code to find out weather for your area.</label><br>
+              <input id="zip" type="text" pattern="[0-9]{5}">
+              <input type="submit" id="submitZip"> 
+              <br><br>
+          </form>
+        </section>
 
           <section id="js-results-weather" class="hidden">
             <div id="js-weather-here">
