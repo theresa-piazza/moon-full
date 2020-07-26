@@ -9,13 +9,13 @@ https://theresa-piazza.github.io/moon-full/
 
 <i><h2>screenshots</h2></i>
 <p>Landing page:</p>
-<img src="moonfull.jpg" width="500px" height="auto">
+<img src="/screenshots/moonfull.jpg" width="500px" height="auto">
 
 <p>Weather:</p>
-<img src="weather.jpg" width="500px" height="auto">
+<img src="/screenshots/weather.jpg" width="500px" height="auto">
 
 <p>Horoscope:</p>
-<img src="horoscope.jpg" width="500px" height="auto">
+<img src="/screenshots/horoscope.jpg" width="500px" height="auto">
 
 <i><h2>Built With</h2></i>
 
