@@ -16,6 +16,9 @@ body {
   display: none;
 }
 
+#zip {
+  padding: 10px;
+}
 
 #moonFind, #submitZip {
   padding: 7px;
