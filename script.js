@@ -133,55 +133,13 @@ function watchMoonForm() {
   });
 }
 
-//////////////// horoscope API /////////
+//////////////// horoscope API ////////////
 
 const URL = 'https://aztro.sameerkumar.website/?sign='
 let signSelected = "";
 
-// corresponding horoscope image
-function showHoroscopeImage (signSelected) {
- console.log(signSelected)
-  if (signSelected === 'aries') {
-    $('#js-horoscope-image').append(`<img src="starSigns/aries.png" alt="Aries symbol" width=120px height=auto"><br>`);
 
-  } else if (responseJson.date_range === "Apr 21 - May 20") {
-    $('#js-horoscope-image').append(`<img src="starSigns/taurus.png" alt="Taurus symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "May 21 - Jun 21") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/gemini.png" alt="Gemini symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Jun 22 - Jul 22") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/cancer.png" alt="Cancer symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range=== "Jul 23 - Aug 22") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/leo.png" alt="Leo symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Aug 23 - Sep 22") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/virgo.png" alt="Virgo symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Sep 23 - Oct 22") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/libra.png" alt="Libra symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Oct 23 - Nov 22") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/scorpio.png" alt="Scorpio symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Nov 23 - Dec 21") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/sagittarius.png" alt="Sagittarius symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Dec 22 - Jan 19") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/capricorn.png" alt="capricorn symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Jan 20 - Feb 18") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/aquarius.png" alt="Aquarius symbol" width=120px height=auto"><br>`);
-
-  } else if (responseJson.date_range === "Feb 19 - Mar 20") { 
-    $('#js-horoscope-image').append(`<img src="starSigns/pisces.png" alt="Pisces symbol" width=120px height=auto"><br>`);
-  }
-}
-
-
-
-// displays JSON response in the DOM
+// displays JSON response & corresponding image in the DOM
 function displayResults(responseJson) {
   console.log(responseJson);
   $('#js-horoscope-results').empty();
