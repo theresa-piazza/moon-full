@@ -30,6 +30,7 @@ function watchZip () {
 
 // calls weather API
 function getWeather () {
+ $('.js-weather-error').empty();
   let location = watchZip();
   console.log(weatherUrl + location + imperialUnits + weatherApiKey)
 
@@ -44,7 +45,7 @@ function getWeather () {
     })
     .then(responseJson => displayWeatherResults(responseJson))
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+      $('.js-weather-error').text(`Something went wrong: ${err.message}`);
     })
 };
 
@@ -61,6 +62,34 @@ function watchWeatherForm() {
 
 ///////// moon phase API //////
 
+// corresponding moon phase image
+function showMoonPhoto (responseJson) {
+  if (responseJson.moon_phase.value === 'new') {
+    $('#js-moon-image').append(`<img src="images/newMoon.png" alt="New moon image">`);
+
+  } else if (responseJson.moon_phase.value === "waxing_crescent") {
+    $('#js-moon-image').append(`<img src="images/waxingCrescent.png" alt="waxing crescent moon image">`);
+
+  } else if (responseJson.moon_phase.value === "first_quarter") { 
+    $('#js-moon-image').append(`<img src="images/firstQuarter.png" alt="first quarter moon image">`);
+
+  } else if (responseJson.moon_phase.value === "waxing_gibbous") { 
+    $('#js-moon-image').append(`<img src="images/waxingGibbous.png" alt="waxing gibbous moon image">`);
+
+  } else if (responseJson.moon_phase.value === "full") { 
+    $('#js-moon-image').append(`<img src="images/fullMoon.png" alt="full moon image">`);
+
+  } else if (responseJson.moon_phase.value === "waning_gibbous") { 
+    $('#js-moon-image').append(`<img src="images/waningGibbous.png" alt="waning gibbous moon image">`);
+
+  } else if (responseJson.moon_phase.value === "last_quarter") { 
+    $('#js-moon-image').append(`<img src="images/lastQuarter.png" alt="last quarter moon image">`);
+
+  } else if (responseJson.moon_phase.value === "waning_crescent") { 
+    $('#js-moon-image').append(`<img src="images/waningCrescent.png" alt="waning crescent moon image">`);
+  }
+}
+
 // displays results of API call
 function displayMoon(responseJson) {
   console.log(responseJson);
@@ -68,13 +97,15 @@ function displayMoon(responseJson) {
 
   $('#js-results-here').append(
     `<p>${responseJson.moon_phase.value}</p>`)
-
+  
   $('#js-results-moon').removeClass('hidden');
+  showMoonPhoto(responseJson);
 };
 
 
 // calls moon phase API
 function getMoonPhase () {
+$('#js-moon-image').empty();
 let getUrl ="https://api.climacell.co/v3/weather/realtime?lat=40.7128&lon=74.006&location_id=NewYorkCity&unit_system=si&fields=moon_phase%2Cprecipitation%3Ain%2Fhr%2Cweather_code&apikey=kKYoyzY7NOkWaJinZ1XrieAKObnY8TWP"
 
   fetch(getUrl, {
@@ -88,7 +119,7 @@ let getUrl ="https://api.climacell.co/v3/weather/realtime?lat=40.7128&lon=74.006
     })
     .then(responseJson => displayMoon(responseJson))
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+      $('#js-moon-error').text(`Something went wrong, please try again ${err.message}`);
     })
 };
 
@@ -107,21 +138,104 @@ function watchMoonForm() {
 const URL = 'https://aztro.sameerkumar.website/?sign='
 let signSelected = "";
 
+// corresponding horoscope image
+function showHoroscopeImage (signSelected) {
+ console.log(signSelected)
+  if (signSelected === 'aries') {
+    $('#js-horoscope-image').append(`<img src="starSigns/aries.png" alt="Aries symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Apr 21 - May 20") {
+    $('#js-horoscope-image').append(`<img src="starSigns/taurus.png" alt="Taurus symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "May 21 - Jun 21") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/gemini.png" alt="Gemini symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Jun 22 - Jul 22") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/cancer.png" alt="Cancer symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range=== "Jul 23 - Aug 22") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/leo.png" alt="Leo symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Aug 23 - Sep 22") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/virgo.png" alt="Virgo symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Sep 23 - Oct 22") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/libra.png" alt="Libra symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Oct 23 - Nov 22") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/scorpio.png" alt="Scorpio symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Nov 23 - Dec 21") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/sagittarius.png" alt="Sagittarius symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Dec 22 - Jan 19") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/capricorn.png" alt="capricorn symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Jan 20 - Feb 18") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/aquarius.png" alt="Aquarius symbol" width=120px height=auto"><br>`);
+
+  } else if (responseJson.date_range === "Feb 19 - Mar 20") { 
+    $('#js-horoscope-image').append(`<img src="starSigns/pisces.png" alt="Pisces symbol" width=120px height=auto"><br>`);
+  }
+}
+
+
 
 // displays JSON response in the DOM
 function displayResults(responseJson) {
   console.log(responseJson);
-  $('#js-results-list').empty();
+  $('#js-horoscope-results').empty();
 
-  $('#js-results-list').append(
-    `<li><p>${responseJson.description}</p></li>`)
+  if (responseJson.date_range === 'Mar 21 - Apr 20') {
+    $('#js-horoscope-results').append(`<img src="starSigns/aries.png" alt="Aries symbol" class="starSign">`);
 
+  } else if (responseJson.date_range === "Apr 21 - May 20") {
+    $('#js-horoscope-results').append(`<img src="starSigns/taurus.png" alt="Taurus symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "May 21 - Jun 21") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/gemini.png" alt="Gemini symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Jun 22 - Jul 22") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/cancer.png" alt="Cancer symbol" class="starSign">`);
+
+  } else if (responseJson.date_range=== "Jul 23 - Aug 22") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/leo.png" alt="Leo symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Aug 23 - Sep 22") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/virgo.png" alt="Virgo symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Sep 23 - Oct 22") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/libra.png" alt="Libra symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Oct 23 - Nov 22") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/scorpio.png" alt="Scorpio symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Nov 23 - Dec 21") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/sagittarius.png" alt="Sagittarius symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Dec 22 - Jan 19") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/capricorn.png" alt="capricorn symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Jan 20 - Feb 18") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/aquarius.png" alt="Aquarius symbol" class="starSign">`);
+
+  } else if (responseJson.date_range === "Feb 19 - Mar 20") { 
+    $('#js-horoscope-results').append(`<img src="starSigns/pisces.png" alt="Pisces symbol" class="starSign">`); 
+  }
+
+
+  $('#js-horoscope-results').append(
+    `<p>${responseJson.description}</p>`)
+  
   $('#js-results').removeClass('hidden');
+  
 };
 
 // makes a call to the horoscope API
 function getHoroscope () {
  console.log(signSelected); 
+ $('#js-horoscope-error').empty();
+
  let apiCall = URL + signSelected + "&day=today";
  console.log(apiCall);
 
@@ -136,8 +250,9 @@ function getHoroscope () {
     })
     .then(responseJson => displayResults(responseJson))
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+      $('#js-horoscope-error').text(`Something went wrong, please try  again ${err.message}`);
     });
+
 };
 
 // triggers when form is submitted
@@ -154,6 +269,7 @@ function watchForm() {
 function watchSign(){
   $( '.sign' ).on( 'click', event => {
     signSelected = $( event.currentTarget ).attr( 'id' );
+  
   });
 }
 
@@ -163,6 +279,7 @@ $(watchForm);
 $(watchMoonForm);
 $(watchWeatherForm);
 $(watchZip);
+
 
 
 console.log('App loaded! Waiting for submit!');
