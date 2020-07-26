@@ -7,7 +7,7 @@
 <p>Please check it out.</p>
 https://theresa-piazza.github.io/moon-full/
 
-<i><h2>screenshots</h2></h1>
+<i><h2>screenshots</h2></i>
 <p>Landing page:</p>
 <img src="moonfull.jpg" width="500px" height="auto">
 
