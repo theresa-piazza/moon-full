@@ -19,7 +19,7 @@
 
 <i><h2>Built With</h2></i>
 
-<p>This app utilizes HTML, CSS, Javascript, and Jquery.</p>
+<p>This app utilizes HTML, CSS, Javascript, and jQuery.</p>
 
 
 <i><h2>Author</h2></i>
