@@ -9,7 +9,6 @@ let imperialUnits = "&units=imperial"
 
 // display weather API results 
 function displayWeatherResults (responseJson) {
-console.log(responseJson)
 $('#js-results-weather').empty();
 
   $('#js-results-weather').append(
@@ -24,7 +23,6 @@ $('#js-results-weather').empty();
 // gets value of zip code 
 function watchZip () {
  let zipCode = $('#zip').val();
- console.log(zipCode)
  return "zip=" + zipCode; 
 };
 
@@ -32,7 +30,7 @@ function watchZip () {
 function getWeather () {
  $('.js-weather-error').empty();
   let location = watchZip();
-  console.log(weatherUrl + location + imperialUnits + weatherApiKey)
+
 
   fetch (weatherUrl + location + imperialUnits + weatherApiKey, {
     "method": "GET",
@@ -52,7 +50,7 @@ function getWeather () {
 // watches weather form for submit
 function watchWeatherForm() {
   $('#findWeather').submit(event => {
-    console.log("weather submit happened")
+ 
     event.preventDefault();
     getWeather();
     
@@ -92,7 +90,7 @@ function showMoonPhoto (responseJson) {
 
 // displays results of API call
 function displayMoon(responseJson) {
-  console.log(responseJson);
+  
   $('#js-results-here').empty();
 
   $('#js-results-here').append(
@@ -126,7 +124,7 @@ let getUrl ="https://api.climacell.co/v3/weather/realtime?lat=40.7128&lon=74.006
 // initializes when moon phase button is pressed
 function watchMoonForm() {
   $('#moon').submit(event => {
-    console.log("moon submit happened")
+ 
     event.preventDefault();
 
     getMoonPhase();
@@ -141,7 +139,7 @@ let signSelected = "";
 
 // displays JSON response & corresponding image in the DOM
 function displayResults(responseJson) {
-  console.log(responseJson);
+ 
   $('#js-horoscope-results').empty();
 
   if (responseJson.date_range === 'Mar 21 - Apr 20') {
@@ -191,11 +189,10 @@ function displayResults(responseJson) {
 
 // makes a call to the horoscope API
 function getHoroscope () {
- console.log(signSelected); 
  $('#js-horoscope-error').empty();
 
  let apiCall = URL + signSelected + "&day=today";
- console.log(apiCall);
+
 
   fetch(apiCall, {
     method: 'POST'
@@ -216,7 +213,7 @@ function getHoroscope () {
 // triggers when form is submitted
 function watchForm() {
   $('#js-choose-sign').submit(event => {
-    console.log("horoscope submit happened")
+
     event.preventDefault();
 
     getHoroscope();
@@ -240,4 +237,4 @@ $(watchZip);
 
 
 
-console.log('App loaded! Waiting for submit!');
+
