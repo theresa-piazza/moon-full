@@ -93,6 +93,7 @@ function displayMoon(responseJson) {
   
   $('#js-results-here').empty();
 
+
   $('#js-results-here').append(
     `<p>${responseJson.moon_phase.value}</p>`)
   
