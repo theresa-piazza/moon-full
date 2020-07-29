@@ -64,6 +64,9 @@ h1 {
   text-align: center;
 }
 
+header {
+  align-items: center;
+}
 
 img {
   max-width: 100%;
