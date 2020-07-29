@@ -31,7 +31,6 @@ function getWeather () {
  $('.js-weather-error').empty();
   let location = watchZip();
 
-
   fetch (weatherUrl + location + imperialUnits + weatherApiKey, {
     "method": "GET",
   })
@@ -50,15 +49,12 @@ function getWeather () {
 // watches weather form for submit
 function watchWeatherForm() {
   $('#findWeather').submit(event => {
- 
     event.preventDefault();
     getWeather();
-    
   });
 }
 
-
-///////// moon phase API //////
+///////// moon phase API ////////
 
 // corresponding moon phase image
 function showMoonPhoto (responseJson) {
@@ -86,17 +82,14 @@ function showMoonPhoto (responseJson) {
   } else if (responseJson.moon_phase.value === "waning_crescent") { 
     $('#js-moon-image').append(`<img src="images/waningCrescent.png" alt="waning crescent moon image">`);
   }
-}
+};
 
 // displays results of API call
 function displayMoon(responseJson) {
-  
   $('#js-results-here').empty();
-
-
   $('#js-results-here').append(
     `<p>${responseJson.moon_phase.value}</p>`)
-  
+	
   $('#js-results-moon').removeClass('hidden');
   showMoonPhoto(responseJson);
 };
@@ -125,9 +118,7 @@ let getUrl ="https://api.climacell.co/v3/weather/realtime?lat=40.7128&lon=74.006
 // initializes when moon phase button is pressed
 function watchMoonForm() {
   $('#moon').submit(event => {
- 
     event.preventDefault();
-
     getMoonPhase();
   });
 }
@@ -137,10 +128,8 @@ function watchMoonForm() {
 const URL = 'https://aztro.sameerkumar.website/?sign='
 let signSelected = "";
 
-
 // displays JSON response & corresponding image in the DOM
 function displayResults(responseJson) {
- 
   $('#js-horoscope-results').empty();
 
   if (responseJson.date_range === 'Mar 21 - Apr 20') {
@@ -179,22 +168,17 @@ function displayResults(responseJson) {
   } else if (responseJson.date_range === "Feb 19 - Mar 20") { 
     $('#js-horoscope-results').append(`<img src="starSigns/pisces.png" alt="Pisces symbol" class="starSign">`); 
   }
-
-
+	
   $('#js-horoscope-results').append(
     `<p>${responseJson.description}</p>`)
   
   $('#js-results').removeClass('hidden');
-  
 };
 
 // makes a call to the horoscope API
 function getHoroscope () {
  $('#js-horoscope-error').empty();
-
  let apiCall = URL + signSelected + "&day=today";
-
-
   fetch(apiCall, {
     method: 'POST'
 })
@@ -214,9 +198,7 @@ function getHoroscope () {
 // triggers when form is submitted
 function watchForm() {
   $('#js-choose-sign').submit(event => {
-
     event.preventDefault();
-
     getHoroscope();
   });
 }
@@ -225,7 +207,6 @@ function watchForm() {
 function watchSign(){
   $( '.sign' ).on( 'click', event => {
     signSelected = $( event.currentTarget ).attr( 'id' );
-  
   });
 }
 
