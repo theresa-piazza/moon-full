@@ -29,6 +29,12 @@ body {
   font-size: 18px;
 }
 
+span {
+  background-color: rgb(128, 128, 128, 0.8);
+  border-radius: 30px;
+  padding: 2px;
+}
+
 p, label, h3  {
   color: white;
   font-size: 20px;
