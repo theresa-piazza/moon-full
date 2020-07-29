@@ -12,13 +12,14 @@
    <header>
     <h1> moon ○ full </h1>
     </header>
+    <main>
       <div class="container"> 
-      <main>
+      
     <!-- Moon API -->
     
         <p><span>Have you ever looked up at the night sky and wondered if the moon was full?</span></p>
-          <form label="findMoonPhase" id="moon">
-            <input type="submit" id="moonFind" label="findMoonPhaseButton" value="tell me the moon phase">
+          <form name="findMoonPhase" id="moon">
+            <input type="submit" id="moonFind" name="findMoonPhaseButton" value="tell me the moon phase">
           </form>
 
         <div id="js-results-moon" class="hidden">
@@ -111,9 +112,8 @@
 
         <div id="js-horoscope-error">
         </div>
-    
-      </div>
-        </main>
+        
+    </main>
  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
