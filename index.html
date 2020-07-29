@@ -9,108 +9,111 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-  <h1> moon ○ full </h1>
-    <div class="container"> 
+   <header>
+    <h1> moon ○ full </h1>
+    </header>
+      <div class="container"> 
+      <main>
     <!-- Moon API -->
     
-      <p>Have you ever looked up at the night sky and wondered if the moon was full?</p>
-        <form id="moon">
-          <input type="submit" id="moonFind" value="tell me the moon phase">
-        </form>
+        <p>Have you ever looked up at the night sky and wondered if the moon was full?</p>
+          <form label="findMoonPhase" id="moon">
+            <input type="submit" id="moonFind" label="findMoonPhaseButton" value="tell me the moon phase">
+          </form>
 
-      <div id="js-results-moon" class="hidden">
-        <p class="smaller">tonight's moon is...</p>
-          <div id="js-results-here">
-          </div>
-      
-          <div id="js-moon-image" class="moonPhasePic"> 
-            <div class="js-moon-error"> 
+        <div id="js-results-moon" class="hidden">
+          <p class="smaller">tonight's moon is...</p>
+            <div id="js-results-here">
             </div>
-          </div>
-      </div>
+      
+            <div id="js-moon-image" class="moonPhasePic"> 
+              <div class="js-moon-error"> 
+              </div>
+            </div>
+         </div>
       
       <!-- Links to Other Sections -->
-      <div class="sectionLink">
-        <p class="smaller">but can you even see the moon tonight?</p>
-        <a href="#weather" class="buttonLink">find out the weather</a>
-      </div>
+        <div class="sectionLink">
+          <p class="smaller">but can you even see the moon tonight?</p>
+          <a href="#weather" class="buttonLink">find out the weather</a>
+        </div>
 
-      <div class="sectionLink">
-        <a href="#js-choose-sign" class="buttonLink">find out your horoscope</a>
-        <p class="smaller">And what does that mean for you?</p>
-      </div>
+        <div class="sectionLink">
+          <a href="#js-choose-sign" class="buttonLink">find out your horoscope</a>
+          <p class="smaller">And what does that mean for you?</p>
+        </div>
       
       
   <!-- Weather API -->
     
-     <img src="lightning.png" alt="pink lightning bolt" class="vector">
+        <img src="lightning.png" alt="pink lightning bolt" class="vector">
       
-        <section id="weather"><br>
-          <form id="findWeather">
+          <section id="weather"><br>
+            <form id="findWeather">
 
-            <label>Enter your 5 digit zip code to find out weather for your area.</label><br>
-              <input id="zip" type="text" pattern="[0-9]{5}">
-              <input type="submit" id="submitZip"> 
-              <br><br>
-          </form>
-        </section>
+              <label>Enter your 5 digit zip code to find out weather for your area.</label><br>
+                <input id="zip" type="text" pattern="[0-9]{5}">
+                <input type="submit" id="submitZip"> 
+                <br><br>
+            </form>
+          </section>
 
           <section id="js-results-weather" class="hidden">
             <div id="js-weather-here">
             </div>
-            <p>Today's weather:</p>
-            </section>
+              <p>Today's weather:</p>
+          </section>
 
-          <div class="js-weather-error">
-          </div>
+            <div class="js-weather-error">
+            </div>
       
   <!-- Horoscope API -->
     
-    <img src="planet.png" alt="pink planet with rings" class="vector">
+      <img src="planet.png" alt="pink planet with rings" class="vector">
 
-    <form id = "js-choose-sign"><br>
-      <p>choose your sign...</p>
+        <form id = "js-choose-sign"><br>
+          <p>choose your sign...</p>
       
-      <button class="sign" type="button" id="aries">Aries</button>
+          <button class="sign" type="button" id="aries">Aries</button>
       
-      <button class="sign" type="button" id="taurus">Taurus</button>
+          <button class="sign" type="button" id="taurus">Taurus</button>
       
-      <button class="sign" type="button" id="gemini">Gemini</button>
+          <button class="sign" type="button" id="gemini">Gemini</button>
       
-      <button class="sign" type="button" id="cancer">Cancer</button>
+          <button class="sign" type="button" id="cancer">Cancer</button>
     
-      <button class="sign" type="button" id="leo">Leo</button>
+          <button class="sign" type="button" id="leo">Leo</button>
       
-      <button class="sign" type="button" id="virgo">Virgo</button>
+          <button class="sign" type="button" id="virgo">Virgo</button>
       
-      <button class="sign" type="button" id="libra">Libra</button>
+          <button class="sign" type="button" id="libra">Libra</button>
       
-      <button class="sign" type="button" id="scorpio">Scorpio</button>
+          <button class="sign" type="button" id="scorpio">Scorpio</button>
    
-      <button class="sign" type="button" id="sagittarius">Sagittarius</button>
+          <button class="sign" type="button" id="sagittarius">Sagittarius</button>
       
-      <button class="sign" type="button" id="capricorn">Capricorn</button>
+          <button class="sign" type="button" id="capricorn">Capricorn</button>
      
-      <button class="sign" type="button" id="aquarius">Aquarius</button>
+          <button class="sign" type="button" id="aquarius">Aquarius</button>
      
-      <button class="sign" type="button" id="pisces">Pisces</button><br><br>
+          <button class="sign" type="button" id="pisces">Pisces</button><br><br>
      
-        <input type="submit" id="horoscope" value="what's your horoscope?">
-    </form>
+            <input type="submit" id="horoscope" value="what's your horoscope?">
+        </form>
 
-    <div id="js-results" class="hidden">
-      <h3>today's horoscope:</h3>
-        <div id="js-horoscope-results">
-          <div id="js-horoscope-image">
-          </div>
+        <div id="js-results" class="hidden">
+          <p>today's horoscope:</p>
+            <div id="js-horoscope-results">
+              <div id="js-horoscope-image">
+              </div>
+            </div>
         </div>
-    </div>
 
-    <div id="js-horoscope-error">
-    </div>
+        <div id="js-horoscope-error">
+        </div>
     
-  </div>
-
+      </div>
+        </main>
  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
