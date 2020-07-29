@@ -16,13 +16,13 @@
       <main>
     <!-- Moon API -->
     
-        <p>Have you ever looked up at the night sky and wondered if the moon was full?</p>
+        <p><span>Have you ever looked up at the night sky and wondered if the moon was full?<span></p>
           <form label="findMoonPhase" id="moon">
             <input type="submit" id="moonFind" label="findMoonPhaseButton" value="tell me the moon phase">
           </form>
 
         <div id="js-results-moon" class="hidden">
-          <p class="smaller">tonight's moon is...</p>
+          <p class="smaller"><span>tonight's moon is...</span></p>
             <div id="js-results-here">
             </div>
       
@@ -34,13 +34,13 @@
       
       <!-- Links to Other Sections -->
         <div class="sectionLink">
-          <p class="smaller">but can you even see the moon tonight?</p>
+          <p class="smaller"><span>but can you even see the moon tonight?</span></p>
           <a href="#weather" class="buttonLink">find out the weather</a>
         </div>
 
         <div class="sectionLink">
           <a href="#js-choose-sign" class="buttonLink">find out your horoscope</a>
-          <p class="smaller">And what does that mean for you?</p>
+          <p class="smaller"><span>And what does that mean for you?<span></p>
         </div>
       
       
@@ -51,7 +51,7 @@
           <section id="weather"><br>
             <form id="findWeather">
 
-              <label>Enter your 5 digit zip code to find out weather for your area.</label><br>
+              <label><span>Enter your 5 digit zip code to find out weather for your area.</span></label><br>
                 <input id="zip" type="text" pattern="[0-9]{5}">
                 <input type="submit" id="submitZip"> 
                 <br><br>
@@ -61,7 +61,7 @@
           <section id="js-results-weather" class="hidden">
             <div id="js-weather-here">
             </div>
-              <p>Today's weather:</p>
+            <p><span>Today's weather:</span></p>
           </section>
 
             <div class="js-weather-error">
@@ -72,7 +72,7 @@
       <img src="planet.png" alt="pink planet with rings" class="vector">
 
         <form id = "js-choose-sign"><br>
-          <p>choose your sign...</p>
+          <p><span>choose your sign...</span></p>
       
           <button class="sign" type="button" id="aries">Aries</button>
       
