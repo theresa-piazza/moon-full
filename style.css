@@ -35,7 +35,7 @@ span {
   padding: 2px;
 }
 
-p, label  {
+p, label, h3  {
   color: white;
   font-size: 20px;
   font-weight: bold; 
