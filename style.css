@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  align-items: center;
-}
-
 
 body { 
   background: url("fullMoon.jpeg") no-repeat center center fixed; 
