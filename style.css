@@ -35,7 +35,7 @@ span {
   padding: 2px;
 }
 
-p, label, h3  {
+p, label  {
   color: white;
   font-size: 20px;
   font-weight: bold; 
@@ -61,6 +61,7 @@ h1 {
   text-align: center;
   padding-top: 5px;
   margin: 0;
+  text-align: center;
 }
 
 
