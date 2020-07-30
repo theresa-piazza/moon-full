@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  align-items: center;
+}
+
 
 body { 
   background: url("fullMoon.jpeg") no-repeat center center fixed; 
@@ -9,7 +13,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 } 
 
 .hidden {
@@ -58,10 +61,11 @@ h1 {
   font-family: chango;
   color: #ff5d8f;
   font-size: 60px;
-  text-align: center;
+  justify-content: center;
   padding-top: 5px;
   margin: 0;
   width: 100%;
+  display: inline;
 }
 
 header {
