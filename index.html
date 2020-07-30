@@ -54,11 +54,11 @@
         <img src="lightning.png" alt="pink lightning bolt" class="vector">
       
           <section id="weather"><br>
-            <form id="findWeather" label="weatherSearch">
+            <form name="findMoonPhase" id="findWeather">
 
-              <p><span>Enter your 5 digit zip code to find out weather for your area</span></p><br>
+              <label for="submitZip"><p><span>Enter your 5 digit zip code to find out weather for your area</span></p><br></label>
                 <input id="zip" type="text" pattern="[0-9]{5}" label="weatherSearch">
-                <input type="submit" id="submitZip" value="Submit">
+                <input type="submit" id="submitZip" name="findMoonPhaseButton" value="tell me the moon phase">
                 <br><br>
             </form>
           </section>
