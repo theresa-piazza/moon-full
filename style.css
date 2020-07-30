@@ -63,6 +63,11 @@ h1 {
   margin: 0;
 }
 
+header {
+  align-items: center;
+  text-align: center;
+}
+
 
 img {
   max-width: 100%;
