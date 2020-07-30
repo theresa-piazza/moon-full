@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  align-items: center;
-}
-
-
 body { 
   background: url("fullMoon.jpeg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -14,6 +9,22 @@ body {
   -o-background-size: cover;
   background-size: cover;
 } 
+
+header {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  width: 100%;
+  display: inline;
+  font-family: chango;
+  color: #ff5d8f;
+  font-size: 60px;
+  justify-content: center;
+  padding-top: 5px;
+  margin: 0;
+}
 
 .hidden {
   display: none;
@@ -56,23 +67,6 @@ p, label, h3  {
 #js-results-here, p {
   text-align: center;
 }
-
-h1 {
-  font-family: chango;
-  color: #ff5d8f;
-  font-size: 60px;
-  justify-content: center;
-  padding-top: 5px;
-  margin: 0;
-  width: 100%;
-  display: inline;
-}
-
-header {
-  text-align: center;
-  width: 100%;
-}
-
 
 img {
   max-width: 100%;
@@ -193,7 +187,7 @@ font-size: 18px;
 
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   h1 {
